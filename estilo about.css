@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.backToTop {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    display: block;
+    background-color: transparent;
+    color: #D9D5C5;
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    font-weight: 600;
+}
+  
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+  
+#sec1 {
+    background-color: #081617;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sec1 img{
+    margin-left: auto;
+    margin-right: 0px;
+    display: block;
+	z-index: 0
+}
+
+#sec1 h2{
+    font-size: 100px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    margin-left: 150px;
+    color: #D9D5C5;
+    z-index: 10;
+}
+
+#sec1 p{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 1px;
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 150px;
+    margin-left: 150px;
+    margin-top: 30px;
+    color: #D9D5C5;
+}
+
+
+
+
+
+#sec2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(img/degradado\ 1.png);
+    background-position: left;
+  }
+  
+  #sec2 .left-side {
+    width: 50%;
+  }
+  
+  #sec2 .left-side h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 600px;
+    margin-top: 0;
+    margin-left: 150px;
+    color: #000000;
+    z-index: 10;
+  }
+  
+  #sec2 .right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #sec2 .right-side h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-right: 68%;
+    color: #000000;
+  }
+  
+  #sec2 .right-side p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 4%;
+    margin-right: 34%;
+    color: #000000;
+    text-align: left;
+  }
+  
+  #sec2 .right-side img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    margin-right: 33%;
+  }
+
+
+
+
+
+  #sec3 {
+    position: relative;
+    background-image: url(img/degradado\ 1.png);
+    background-position: 100%;
+    
+  }
+  
+  #sec3 h2 {
+    position: absolute;
+    top: 100px;
+    left: 15%;
+    transform: translateX(-50%);
+    font-size: 40px;
+  }
+  
+  /* Estilos para la tabla */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 150px;
+  }
+  
+  table td {
+    padding: 50px;
+    text-align: right;
+  }
+  
+  table img {
+    max-width: 70px;
+  }
+  
+  /* Estilos para los contenedores */
+  .left-container, .right-container {
+    width: 40%;
+    float: left;
+  }
+  
+  .right-container {
+    float: right;
+  }
+  
+  /* Estilos para la barra de progreso */
+  .progress-bar {
+    height: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
+    border-radius: 10px;
+  }
+  
+  
+  #ejemplo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+  }
+  #ejemplo div {
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  

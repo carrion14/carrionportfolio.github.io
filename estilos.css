@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding: 0 40px;
+    align-items: center;
+    position: relative;
+}
+
+.texto-titulo {
+  animation: aparecerLetras 2s ease forwards;
+  
+}
+
+.texto-titulo-2 {
+  animation: aparecerLetras 2s ease forwards;
+  animation-play-state: paused;
+}
+
+.texto-titulo-3 {
+  animation: aparecerLetras 2s ease forwards;
+  animation-play-state: paused;
+}
+
+.texto-titulo-4 {
+  animation: aparecerLetras 2s ease forwards;
+  animation-play-state: paused;
+}
+
+.divisor-pequeño {
+  animation: aparecerLetras 2s ease forwards;
+  animation-play-state: paused;
+}
+
+.divisor-grande {
+  animation: aparecerLetras 2s ease forwards;
+  animation-play-state: paused;
+}
+
+.texto-parrafo{
+  animation: aparecerLetras 2s ease forwards;
+  
+}
+
+.texto-parrafo-2 {
+  animation: aparecerLetras 2s ease forwards;
+  animation-play-state: paused;
+}
+
+
+@keyframes aparecerLetras {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+section h2{
+    font-size: 100px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    margin-left: 150px;
+    color: #D9D5C5;
+	z-index: 10
+    
+}
+
+section p{
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 150px;
+    margin-left: 150px;
+    margin-top: 30px;
+    color: #D9D5C5;
+}
+
+.textoflotante {
+    font-weight: 500;
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #3DA8B0;
+    animation: movertexto 0.5s ease-in-out alternate;
+}
+
+.lunaflotante {
+    width: 1300px;
+    height: 1300px;
+    margin-top: 250px;
+    margin-left: 125px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    z-index: -1;
+}
+
+@keyframes movertexto {
+    0% {
+      transform: translate(-50%, -50%) ;
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+}
+
+p{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 1px;
+}
+
+#botonarchive {
+    position: absolute;
+    text-align: center;
+    margin-top: -200px;
+    margin-right: 1480px;
+    right: 0;
+    background-color: #3da8b0;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  
+  #botonarchive:hover {
+    background-color: lightblue;
+    cursor: pointer;
+  }
+  
+  #botonabout {
+    position: absolute;
+    text-align: center;
+    margin-top: -200px;
+    margin-right: 1480px;
+    right: 0;
+    background-color: #3da8b0;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  
+  #botonabout:hover {
+    background-color: lightblue;
+    cursor: pointer;
+  }
+  
+
+a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: #D9D5C5;
+    padding: 10px 20px;
+    border: 1px solid #D9D5C5;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+
+img {
+    margin-left: auto;
+    margin-right: 150px;
+    display: block;
+	z-index: 0
+}
+
+
+section img{
+    height: 80%;
+}
+
+.divisor-pequeño {
+    width: 17%;
+    height: 5px;
+    background-color: #3DA8B0;
+    margin: 20px 0;
+    border-radius: 5px;
+    margin-left: 150px;
+}
+
+.divisor-grande {
+    width: 17%;
+    height: 5px;
+    background-color: #3DA8B0;
+    margin: 0px 50px;
+    border-radius: 10px;
+    margin-left: 200px;
+}
+
+@media screen and (max-width:1000px){
+    section{
+        flex-direction: column-reverse;
+        
+    }
+
+    section > img{
+        height: 40%;
+    }
+
+    .contenedor-texto{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:600px){
+    section{
+        flex-direction: column-reverse;
+        
+    }
+
+    section > img{
+        height: 30%;
+    }
+}
+
+@media screen and (min-width:2000px){
+  .lunaflotante{
+    width: 2000;
+    height: 1000;
+    margin-top: 250px;
+    margin-left: 600px;
+    font-size: 100px;
+    z-index: -1;
+  }
+    
+}
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 7%;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/fondo\ 2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  .background-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081617;
+    background-size: cover;
+    z-index: -2;
+}
+
+.backToTop {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    display: block;
+    background-color: transparent;
+    color: #D9D5C5;
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    font-weight: 600;
+}
+  
+.floating-instagram-button {
+    position: fixed;
+    top: 40px;
+    right: 230px;
+    color: #fff;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .floating-instagram-button i {
+    font-size: 40px;
+  }
+
+  .floating-instagram-button a {
+    font-size: 40px;
+    border: none;
+    content: ico;
+  }
+
+
+  .floating-twitter-button {
+    position: fixed;
+    top: 40px;
+    right: 170px;
+    color: #fff;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .floating-twitter-button i {
+    font-size: 40px;
+  }
+
+  .floating-twitter-button a {
+    font-size: 40px;
+    border: none;
+    content: ico;
+  }
+
+
+  .floating-Behance-button {
+    position: fixed;
+    top: 40px;
+    right: 5px;
+    color: #fff;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .floating-Behance-button i {
+    font-size: 40px;
+  }
+
+  .floating-Behance-button a {
+    font-size: 40px;
+    border: none;
+    content: ico;
+  }
+
+
+
+
+  .floating-menu {
+    position: fixed;
+    top: 400px;
+    left: 35px;
+    color: #fff;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .floating-menu i {
+    font-size: 40px;
+  }
+
+  .floating-menu a {
+    font-size: 40px;
+    border: none;
+    content: ico;
+  }
+
+  .floating-archive {
+    position: fixed;
+    top: 450px;
+    left: 35px;
+    color: #fff;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .floating-archive i {
+    font-size: 40px;
+  }
+
+  .floating-archive a {
+    font-size: 40px;
+    border: none;
+    content: ico;
+  }
+
+
+  .floating-about {
+    position: fixed;
+    top: 500px;
+    left: 35px;
+    color: #fff;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .floating-about i {
+    font-size: 40px;
+  }
+
+  .floating-about a {
+    font-size: 40px;
+    border: none;
+    content: ico;
+  }
+
+  .floating-contact {
+    position: fixed;
+    top: 550px;
+    left: 35px;
+    color: #fff;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .floating-contact i {
+    font-size: 40px;
+  }
+
+  .floating-contact a {
+    font-size: 40px;
+    border: none;
+    content: ico;
+  }
+
+
+  

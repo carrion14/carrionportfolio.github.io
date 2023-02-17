@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7aaca0699b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <button id="backToTop" class="backToTop" id="submit-button" name="submit" value="Submit">Rubén Carrión</button>
+
+    <div class="floating-instagram-button">
+        <a href="https://www.instagram.com/carriondesigns/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <div class="floating-twitter-button">
+        <a href="https://twitter.com/RCarrion_" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+
+    <div class="floating-Behance-button">
+        <a href="https://www.behance.net/rubencarrion2" target="_blank">
+          <i class="">Behance</i>
+        </a>
+    </div>
+
+
+
+    <div class="floating-menu">
+      <a href="#sec1">
+        <i class="fa-thin fa-minus"></i>
+      </a>
+  </div>
+
+  <div class="floating-archive">
+      <a href="#sec2" >
+        <i class="fa-thin fa-minus"></i>
+      </a>
+  </div>
+
+  <div class="floating-about">
+      <a href="#sec3">
+        <i class="fa-thin fa-minus"></i>
+      </a>
+  </div>
+
+  <div class="floating-contact">
+    <a href="#sec4">
+      <i class="fa-thin fa-minus"></i>
+    </a>
+</div>
+
+
+    
+
+
+    <section id="sec1" class="section">
+        <div class="contenedor-texto">
+            <h2 class="texto-titulo">RUBÉN<br>
+            CARRIÓN</h2>
+            <div class="divisor-pequeño"></div>
+            <div class="divisor-grande"></div>
+            <p class="texto-parrafo">Graphic Designer /<br>audiovisual</p>
+      </div>
+        <div class="textoflotante">PORTFOLIO</div>
+        <div class="lunaflotante">
+                <img src="img/luna.png" alt="">
+        </div>
+    </section>
+
+
+    <section id="sec2">
+        <div class="contenedor-texto">
+            <h2 class="texto-titulo-2">ARCHIVE</h2>
+            <div class="divisor-pequeño"></div>
+            <div class="divisor-grande"></div>
+            <p class="texto-parrafo-2">Projects Portfolio</p>
+            <a href="https://www.behance.net/rubencarrion2">
+                <button id="botonarchive" style="margin-left: 0px;"> Show me more</button>
+            </a>
+        </div>
+        
+        <img src="img/portada de archive.png" alt="">
+    </section>
+
+
+    <section id="sec3">
+        <div class="contenedor-texto">
+            <h2 class="texto-titulo-3">ABOUT ME</h2>
+            <div class="divisor-pequeño"></div>
+            <div class="divisor-grande"></div>
+            <p class="texto-parrafo-2">I love Design, Technology,
+                and Story.</p>
+            <a href="about.html">
+                <button id="botonabout" style="margin-left: 0px;"> Show me more</button>
+            </a>
+        </div>
+		<img src="img/portada de about me.png" alt="">
+	
+	</section>
+
+    <section id="sec4">
+        <div class="contenedor-texto">
+            <h2 class="texto-titulo-4">CONTACT</h2>
+            <div class="divisor-pequeño"></div>
+            <div class="divisor-grande"></div>
+            <p class="texto-parrafo-2">rubencarrion6@gmail.com<br><br>+34 619 823 965</p>
+        </div>
+        <img src="img/portada de contacto.png" alt="">
+    </section>
+
+    <div class="background"></div>
+
+    <div class="background-fixed"></div>
+
+    <i class="fas fa-search"></i>
+    
+    <script>
+        const background = document.querySelector('.background');
+        const textoflotante = document.querySelector('.textoflotante');
+        const floatingImage = document.querySelector('.lunaflotante');
+        const sec1 = document.querySelector('#sec1');
+        const sec2 = document.querySelector('#sec2');
+        const backToTop = document.querySelector('#backToTop');
+      
+        window.addEventListener('mousemove', (event) => {
+          const x = event.clientX / window.innerWidth;
+          const y = event.clientY / window.innerHeight;
+      
+          floatingImage.style.transform = `translate(-${x * 3}%, -${y * 3}%)`;
+          background.style.transform = `translate(-${x * 3}%, -${y * 3}%)`;
+          textoflotante.style.transform = `translate(${x * 15}%, ${y * 15}%)`;
+        });
+
+        document.getElementById("botonarchive").addEventListener("click", function() {
+            window.location.href = "https://www.google.com";
+        });
+      
+        window.addEventListener('scroll', (event) => {
+          const scrollTop = window.scrollY;
+      
+          if (scrollTop >= sec1.offsetTop && scrollTop < sec2.offsetTop) {
+            textoflotante.style.display = 'block';
+          } else {
+            textoflotante.style.display = 'none';
+          }
+      
+          if (window.scrollY > -1) {
+            backToTop.style.display = 'block';
+          } else {
+            backToTop.style.display = 'none';
+          }
+        });
+      
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+
+
+        var textosTitulo = document.querySelectorAll(".texto-titulo, .texto-titulo-2, .texto-titulo-3, .texto-titulo-4, .divisor-pequeño, .divisor-grande, .texto-parrafo-2");
+
+            function checkVisibility() {
+              textosTitulo.forEach(function(textoTitulo) {
+                var bounding = textoTitulo.getBoundingClientRect();
+                if (
+                  bounding.top >= 0 &&
+                  bounding.left >= 0 &&
+                  bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+                  bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                ) {
+                  textoTitulo.style.animationPlayState = "running";
+                } else {
+                  textoTitulo.style.animationPlayState = "paused";
+                }
+              });
+            }
+
+        window.addEventListener("scroll", checkVisibility);
+
+        
+        
+      </script>
+      
+      
+</body>
+</html>
